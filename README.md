@@ -23,7 +23,7 @@ Description
 #### - Iterative Kernel Correction
   - Proposed Iterative Kernel Correction (IKC) framework consists of a SR model F, a predictor P and a corrector C
   
-  <img src="https://user-images.githubusercontent.com/52263269/224943989-de78014b-bf99-43f4-b10a-18c9adc644bf.png" width="45%"></img>
+  <img src="https://user-images.githubusercontent.com/52263269/224943989-de78014b-bf99-43f4-b10a-18c9adc644bf.png" width="40%"></img>
 
 #### - SFTMD network, Predictor/Corrector
   - SFTMD network
@@ -37,7 +37,7 @@ Description
     - $SFT(F, H) = \gamma \odot F + \beta$
   
   - Predictor/Corrector
-    - Predictor: to adopt a predictor function $k` = P(I^{LR})$ that estimates k from the LR input directly
+    - Predictor: to adopt a predictor function $k = P(I^{LR})$ that estimates k from the LR input directly
     - Corrector: To correctly estimate $k$, we build a corrector function $C$ that measures the difference between the estimated kernel and the ground truth kernel
     - Architecture of Predictor/Corrector
   
