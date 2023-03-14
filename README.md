@@ -3,9 +3,28 @@ Description
 =============
 
 #### - Blind Super-Resolution Problem
+  - Assume that the degradation kernels are unavailable
   - Formulated as follows: $I^{LR} = (k \otimes I^{HR}) \downarrow_s + n$
     - $I^{HR}$ = HR image, $I^{LR}$ = LR image related by a degradation model, $\otimes$ = Convolution operation
     - $k$ = blur kenel, $\downarrow_s$ = downsampling operation, $n$ = additive noise
+
+#### - Contributions of "Blind Super-Resolution With Iterative Kernel Correction"
+  (1) Propose an intuitive and effective deep learning framework for blur kernel estimation in single image super resolution
+  (2) Propose a new non-blind SR network using the spatial feature transform layers for multiple blur kernels
+  (3) Test blind SR performance on both carefully selected blur kernels and real images: shows SOTA performance in blind SR problem
+  
+#### - Kernel mismatch problem
+  - 
+  - Bring regular artifacts (either over-sharpening or over-smoothing), which can be applied to correct inaccurate blur kernels
+  
+#### - SFTMD network
+  - Kernel mismatch problem: bring regular artifacts (either over-sharpening or over-smoothing), which can be applied to correct inaccurate blur kernels
+  - SR network architecture using spatial feature transform (SFT) layers to handle multiple blur kernels to alleiviate kernel mismatch problem
+  - SFT layer provides affine transformation for the feature maps $F$ conditioned on the kernel maps $H$ by a scaling and shifting operation
+    - $$SFT(F, H) = \gamma \odot F + \beta 
+  - Architecture
+  
+  <img src="https://user-images.githubusercontent.com/52263269/224941758-52f9c898-9fee-4c24-bc63-9d577756c680.png" width="60%"></img>
 
 Contents
 =============
