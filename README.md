@@ -26,16 +26,22 @@ Description
   <img src="https://user-images.githubusercontent.com/52263269/224943989-de78014b-bf99-43f4-b10a-18c9adc644bf.png" width="45%"></img>
 
 #### - SFTMD network, Predictor/Corrector
-  - SR network architecture using spatial feature transform (SFT) layers to handle multiple blur kernels to alleiviate kernel mismatch problem
-  - SFT layer provides affine transformation for the feature maps $F$ conditioned on the kernel maps $H$ by a scaling and shifting operation
+  - SFTMD network
+    - SR network architecture using spatial feature transform (SFT) layers to handle multiple blur kernels to alleiviate kernel mismatch problem
+    - Architecture of SFTMD
+    
+    <img src="https://user-images.githubusercontent.com/52263269/224941758-52f9c898-9fee-4c24-bc63-9d577756c680.png" width="65%"></img>
+  
+  - SFT layer
+    - Affine transformation for the feature maps $F$ conditioned on the kernel maps $H$ by a scaling and shifting operation
     - $SFT(F, H) = \gamma \odot F + \beta$
-  - Architecture of SFTMD
   
-  <img src="https://user-images.githubusercontent.com/52263269/224941758-52f9c898-9fee-4c24-bc63-9d577756c680.png" width="65%"></img>
+  - Predictor/Corrector
+    - Predictor: to adopt a predictor function $k` = P(I^{LR})$ that estimates k from the LR input directly
+    - Corrector: To correctly estimate $k$, we build a corrector function $C$ that measures the difference between the estimated kernel and the ground truth kernel
+    - Architecture of Predictor/Corrector
   
-  - Architecture of Predictor/Corrector
-  
-  <img src="https://user-images.githubusercontent.com/52263269/224945169-0dfb542a-637f-4245-84f2-8af73cc54406.png" width="65%"></img>
+    <img src="https://user-images.githubusercontent.com/52263269/224945169-0dfb542a-637f-4245-84f2-8af73cc54406.png" width="65%"></img>
 
 Contents
 =============
