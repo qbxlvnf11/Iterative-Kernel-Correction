@@ -80,13 +80,15 @@ Evaluation Using PSNR/SSIM Metric and Test SR
 =============
 
 #### - Set5 dataset
-  - dataset_name: 'set5', 'set14', 'bsd100', 'urban100'
+  - dataset_name in command: 'set5', 'set14', 'bsd100', 'urban100'
+  - dataroot_GT in config file: LRblur, Bic, ...
   ```
   python codes/test_SFTMD.py -opt_F codes/options/test/test_SFTMD_{dataset_name}.yml
   ```
 
 #### - IKC
-  - dataset_name: 'set5', 'set14', 'bsd100', 'urban100'
+  - dataset_name in command: 'set5', 'set14', 'bsd100', 'urban100'
+  - dataroot_GT in config file: LRblur, Bic, ...
   ```
   python codes/test_IKC.py -opt_F codes/options/test/test_SFTMD_{dataset_name}.yml -opt_P codes/options/test/test_Predictor_{dataset_name}.yml -opt_C codes/options/test/test_Corrector_{dataset_name}.yml
   ```
