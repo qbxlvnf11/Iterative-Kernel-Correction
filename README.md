@@ -6,8 +6,7 @@ Description
   - Formulated as follows
     - $I^{HR}$ = HR image, $I^{LR}$ = LR image related by a degradation model, $\otimes$ = Convolution operation
     - $k$ = blur kenel, $\downarrow_s$ = downsampling operation, $n$ = additive noise
-  
-    **$I^{LR} = (k \otimes I^{HR}) \downarrow_s + n$**
+    - **$I^{LR} = (k \otimes I^{HR}) \downarrow_s + n$**
 
 Contents
 =============
