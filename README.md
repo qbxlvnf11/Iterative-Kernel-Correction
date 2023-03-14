@@ -2,16 +2,16 @@
 Description
 =============
 
+#### - Contributions of "Blind Super-Resolution With Iterative Kernel Correction"
+  - Propose an intuitive and effective deep learning framework for blur kernel estimation in single image super resolution
+  - Propose a new non-blind SR network using the spatial feature transform layers for multiple blur kernels
+  - Test blind SR performance on both carefully selected blur kernels and real images: shows SOTA performance in blind SR problem
+
 #### - Blind Super-Resolution Problem
   - Assume that the degradation kernels are unavailable
   - Formulated as follows: $I^{LR} = (k \otimes I^{HR}) \downarrow_s + n$
     - $I^{HR}$ = HR image, $I^{LR}$ = LR image related by a degradation model, $\otimes$ = Convolution operation
     - $k$ = blur kenel, $\downarrow_s$ = downsampling operation, $n$ = additive noise
-
-#### - Contributions of "Blind Super-Resolution With Iterative Kernel Correction"
-  - Propose an intuitive and effective deep learning framework for blur kernel estimation in single image super resolution
-  - Propose a new non-blind SR network using the spatial feature transform layers for multiple blur kernels
-  - Test blind SR performance on both carefully selected blur kernels and real images: shows SOTA performance in blind SR problem
   
 #### - Kernel mismatch problem
   - SR methods assume that the downsampling blur kernel is known and pre-defined, but the blur kernels involved in real applications are typically complicated and unavailable
@@ -23,7 +23,7 @@ Description
 #### - Iterative Kernel Correction
   - Proposed Iterative Kernel Correction (IKC) framework consists of a SR model F, a predictor P and a corrector C
   
-  <img src="https://user-images.githubusercontent.com/52263269/224943989-de78014b-bf99-43f4-b10a-18c9adc644bf.png" width="65%"></img>
+  <img src="https://user-images.githubusercontent.com/52263269/224943989-de78014b-bf99-43f4-b10a-18c9adc644bf.png" width="45%"></img>
 
 #### - SFTMD network, Predictor/Corrector
   - SR network architecture using spatial feature transform (SFT) layers to handle multiple blur kernels to alleiviate kernel mismatch problem
