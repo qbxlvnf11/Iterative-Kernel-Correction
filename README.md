@@ -2,14 +2,12 @@
 Description
 =============
 
-#### - Blind Super Resolution
-  - 
-  - 
+#### - Blind Super-Resolution Problem
+  - Formulated as follows
+<img src="https://user-images.githubusercontent.com/52263269/224929557-612b9de1-b732-4c70-ad9e-994a818f1dcf.png" width="45%"></img>
 
 Contents
 =============
-
-<img src="https://user-images.githubusercontent.com/52263269/176017021-514af297-0bba-4909-85b1-2629a7014586.png" width="45%"></img>
 
 #### - Run test codes for SFTMD & IKC Methods in [official repository](https://github.com/yuanjunchai/IKC)
   - Configs
@@ -59,13 +57,7 @@ docker pull qbxlvnf11docker/ikc_env:latest
 References
 =============
 
-#### - IKC: Blind Super-Resolution With Iterative Kernel Correction Github
-
-https://github.com/yuanjunchai/IKC
-
-https://github.com/Lornatang/SFTMD-PyTorch
-
-#### - YoloX paper
+#### - Blind Super-Resolution With Iterative Kernel Correction paper
 ```
 @article{IKC,
   title={Blind Super-Resolution With Iterative Kernel Correction},
@@ -74,6 +66,12 @@ https://github.com/Lornatang/SFTMD-PyTorch
   year={2019}
 }
 ```
+
+#### - Blind Super-Resolution With Iterative Kernel Correction Github Page
+
+https://github.com/yuanjunchai/IKC
+
+https://github.com/Lornatang/SFTMD-PyTorch
 
 Author
 =============
