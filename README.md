@@ -47,8 +47,6 @@ Contents
 =============
 
 #### - Run test codes for SFTMD & IKC Methods in [official repository](https://github.com/yuanjunchai/IKC)
-  - Configs
-  -
   
 Docker Environment
 =============
@@ -78,18 +76,20 @@ Dataset
   python codes/scripts/generate_mod_LR_bic.py
   ```
 
-Test SR
+Evaluation Using PSNR/SSIM Metric and Test SR
 =============
 
-#### - Download TensorRT Docker environment
-```
-docker pull qbxlvnf11docker/ikc_env:latest
-```
+#### - Set5 dataset
+  - dataset_name: 'set5', 'set14', 'bsd100', 'urban100'
+  ```
+  python codes/test_SFTMD.py -opt_F codes/options/test/test_SFTMD_{dataset_name}.yml
+  ```
 
-#### - Download TensorRT Docker environment
-```
-docker pull qbxlvnf11docker/ikc_env:latest
-```
+#### - IKC
+  - dataset_name: 'set5', 'set14', 'bsd100', 'urban100'
+  ```
+  python codes/test_IKC.py -opt_F codes/options/test/test_SFTMD_{dataset_name}.yml -opt_P codes/options/test/test_Predictor_{dataset_name}.yml -opt_C codes/options/test/test_Corrector_{dataset_name}.yml
+  ```
 
 References
 =============
