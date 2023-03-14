@@ -21,7 +21,7 @@ Description
   - Kernel mismatch problem: bring regular artifacts (either over-sharpening or over-smoothing), which can be applied to correct inaccurate blur kernels
   - SR network architecture using spatial feature transform (SFT) layers to handle multiple blur kernels to alleiviate kernel mismatch problem
   - SFT layer provides affine transformation for the feature maps $F$ conditioned on the kernel maps $H$ by a scaling and shifting operation
-    - $$SFT(F, H) = \gamma \odot F + \beta 
+    - $SFT(F, H) = \gamma \odot F + \beta$
   - Architecture
   
   <img src="https://user-images.githubusercontent.com/52263269/224941758-52f9c898-9fee-4c24-bc63-9d577756c680.png" width="60%"></img>
