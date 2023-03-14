@@ -9,24 +9,33 @@ Description
     - $k$ = blur kenel, $\downarrow_s$ = downsampling operation, $n$ = additive noise
 
 #### - Contributions of "Blind Super-Resolution With Iterative Kernel Correction"
-
-  (1) Propose an intuitive and effective deep learning framework for blur kernel estimation in single image super resolution
-  
-  (2) Propose a new non-blind SR network using the spatial feature transform layers for multiple blur kernels
-  
-  (3) Test blind SR performance on both carefully selected blur kernels and real images: shows SOTA performance in blind SR problem
+  - Propose an intuitive and effective deep learning framework for blur kernel estimation in single image super resolution
+  - Propose a new non-blind SR network using the spatial feature transform layers for multiple blur kernels
+  - Test blind SR performance on both carefully selected blur kernels and real images: shows SOTA performance in blind SR problem
   
 #### - Kernel mismatch problem
-  - 
+  - SR methods assume that the downsampling blur kernel is known and pre-defined, but the blur kernels involved in real applications are typically complicated and unavailable
   - Bring regular artifacts (either over-sharpening or over-smoothing), which can be applied to correct inaccurate blur kernels
+  - Conversely, if the input kernel is sharper than the correct one, then the results will be over-shapened with obvious ringing effects as follow figure
+
+  <img src="https://user-images.githubusercontent.com/52263269/224943466-9fa68182-18f5-4e87-90d1-33c6e324ed79.png" width="35%"></img>
+
+#### - Iterative Kernel Correction
+  - Proposed Iterative Kernel Correction (IKC) framework consists of a SR model F, a predictor P and a corrector C
   
-#### - SFTMD network
+  <img src="https://user-images.githubusercontent.com/52263269/224943989-de78014b-bf99-43f4-b10a-18c9adc644bf.png" width="65%"></img>
+
+#### - SFTMD network, Predictor/Corrector
   - SR network architecture using spatial feature transform (SFT) layers to handle multiple blur kernels to alleiviate kernel mismatch problem
   - SFT layer provides affine transformation for the feature maps $F$ conditioned on the kernel maps $H$ by a scaling and shifting operation
     - $SFT(F, H) = \gamma \odot F + \beta$
-  - Architecture
+  - Architecture of SFTMD
   
-  <img src="https://user-images.githubusercontent.com/52263269/224941758-52f9c898-9fee-4c24-bc63-9d577756c680.png" width="60%"></img>
+  <img src="https://user-images.githubusercontent.com/52263269/224941758-52f9c898-9fee-4c24-bc63-9d577756c680.png" width="65%"></img>
+  
+  - Architecture of Predictor/Corrector
+  
+  <img src="https://user-images.githubusercontent.com/52263269/224945169-0dfb542a-637f-4245-84f2-8af73cc54406.png" width="65%"></img>
 
 Contents
 =============
