@@ -5,6 +5,7 @@ Description
 #### - Blind Super-Resolution Problem
   - Formulated as follows
 
+$I^(LR)$
 <img src="https://user-images.githubusercontent.com/52263269/224929557-612b9de1-b732-4c70-ad9e-994a818f1dcf.png" width="25%"></img>
 
 Contents
