@@ -4,9 +4,9 @@ Description
 
 #### - Blind Super-Resolution Problem
   - $I^{HR}$ = HR image, $I^{LR}$ = LR image related by a degradation model, $\otimes$ = Convolution operation
+  - $k$ = blur kenel, $\downarrow_s$ = downsampling operation, $n$ = additive noise
   - Formulated as follows
-  $ I^{LR} = (k \otimes I^{HR}) \downarrow_s + n $
-<img src="https://user-images.githubusercontent.com/52263269/224929557-612b9de1-b732-4c70-ad9e-994a818f1dcf.png" width="25%"></img>
+  $I^{LR} = (k \otimes I^{HR}) \downarrow_s + n$
 
 Contents
 =============
